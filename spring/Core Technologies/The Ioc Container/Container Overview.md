@@ -1,0 +1,12 @@
+# 容器总览
+
+org.springframework.context.ApplicationContext 接口是 Spring IoC container 的实现代表之一，负责实例化，配置和组装Beans，容器通过获取配置，元数据来实例化对象；配置元数据的类型有XML，java注解，和java代码等。这些配置可以让你创建对象并组装应用，并且，可以和多种方式和第三方组件桥接使用；
+
+在Spring中有很多种ApplicationContext的实现，在独立的应用中，通常使用的ClassPathXmlApplicationContext和FileSystemXmlApplicationContext；虽然XML一直是定义配置元数据的传统格式，但可以通过提供少量XML配置来声明地启用对这些附加元数据格式的支持，从而指示容器使用Java注解或代码作为元数据格式
+
+在绝大部分应用场景中，不需要用户使用显式代码来实例化一个或多个Spring IoC容器实例。例如，在web应用的场景中，XML文件中简单的八行(或左右)样板web描述符XML通常就足够了(参见web应用程序的方便应用程序上下文实例化)。如果使用Spring Tools for Eclipse(基于Eclipse的开发环境)，只需单击几下鼠标或敲击几下键盘，就可以轻松地创建这个样板配置
+
+下面的这个图片从高层级的角度解释了Spring是怎么工作的，应用程序类与配置元数据相结合，在ApplicationContext创建和完成初始化之后，就可以创建出一个完全配置的可执行系统或应用程序。
+
+![container magic](/Users/qsir/translation/spring/Core%20Technologies/The%20Ioc%20Container/assets/container-magic.png)
+
