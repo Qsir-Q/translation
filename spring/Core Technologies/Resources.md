@@ -396,7 +396,8 @@ Spring也会评估URLClassLoader运行时配置和jar文件中的java.class.path
 
 没有附加到FileSystemApplicationContext的FileSystemResource(也就是说，当FileSystemApplicationContext不是实际的ResourceLoader时)按照您所期望的方式处理绝对路径和相对路径。相对路径是相对于当前工作目录的，而绝对路径是相对于文件系统根目录的。
 
-但是，由于向后兼容性(历史)原因，当FileSystemApplicationContext是ResourceLoader时，这种情况会发生变化。FileSystemApplicationContext强制所有附加的FileSystemResource实例将所有位置路径视为相对路径，无论它们是否以斜杠开头。在实践中，这意味着以下示例是等效的:
+但是，由于向后兼容性(历史)原因，当FileSystemApplicationContext是ResourceLoader时，这种情况会发生变化。FileSystemApplicationContext强制所有附加的FileSystemResource实例将所有位置路径视为相对路径，无论它们是否以斜杠开头。
+在实践中，这意味着以下示例是等效的:
 
 ```java
 ApplicationContext ctx =
